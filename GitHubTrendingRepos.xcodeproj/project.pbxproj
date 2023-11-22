@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8BABB8C42B0D365C00E12042 /* GitHubTrendingReposApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8C32B0D365C00E12042 /* GitHubTrendingReposApp.swift */; };
-		8BABB8C62B0D365C00E12042 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8C52B0D365C00E12042 /* ContentView.swift */; };
+		8BABB8C62B0D365C00E12042 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8C52B0D365C00E12042 /* WelcomeView.swift */; };
 		8BABB8C82B0D365D00E12042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BABB8C72B0D365D00E12042 /* Assets.xcassets */; };
 		8BABB8CB2B0D365D00E12042 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BABB8CA2B0D365D00E12042 /* Preview Assets.xcassets */; };
 		8BABB8D52B0D365E00E12042 /* GitHubTrendingReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8D42B0D365E00E12042 /* GitHubTrendingReposTests.swift */; };
 		8BABB8DF2B0D365E00E12042 /* GitHubTrendingReposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8DE2B0D365E00E12042 /* GitHubTrendingReposUITests.swift */; };
 		8BABB8E12B0D365E00E12042 /* GitHubTrendingReposUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8E02B0D365E00E12042 /* GitHubTrendingReposUITestsLaunchTests.swift */; };
+		8BABB8F12B0D4B9000E12042 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8F02B0D4B9000E12042 /* WelcomeViewModel.swift */; };
+		8BABB8F72B0E1BC800E12042 /* UnderlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8F62B0E1BC800E12042 /* UnderlineButton.swift */; };
+		8BABB8F92B0E278900E12042 /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8F82B0E278900E12042 /* CallToActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		8BABB8C02B0D365C00E12042 /* GitHubTrendingRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubTrendingRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BABB8C32B0D365C00E12042 /* GitHubTrendingReposApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrendingReposApp.swift; sourceTree = "<group>"; };
-		8BABB8C52B0D365C00E12042 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8BABB8C52B0D365C00E12042 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8BABB8C72B0D365D00E12042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BABB8CA2B0D365D00E12042 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BABB8D02B0D365E00E12042 /* GitHubTrendingReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubTrendingReposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,9 @@
 		8BABB8DA2B0D365E00E12042 /* GitHubTrendingReposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubTrendingReposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BABB8DE2B0D365E00E12042 /* GitHubTrendingReposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrendingReposUITests.swift; sourceTree = "<group>"; };
 		8BABB8E02B0D365E00E12042 /* GitHubTrendingReposUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrendingReposUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8BABB8F02B0D4B9000E12042 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		8BABB8F62B0E1BC800E12042 /* UnderlineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineButton.swift; sourceTree = "<group>"; };
+		8BABB8F82B0E278900E12042 /* CallToActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				8BABB8C22B0D365C00E12042 /* GitHubTrendingRepos */,
+				8BABB8C32B0D365C00E12042 /* GitHubTrendingReposApp.swift */,
 				8BABB8D32B0D365E00E12042 /* GitHubTrendingReposTests */,
 				8BABB8DD2B0D365E00E12042 /* GitHubTrendingReposUITests */,
 				8BABB8C12B0D365C00E12042 /* Products */,
@@ -94,8 +101,8 @@
 		8BABB8C22B0D365C00E12042 /* GitHubTrendingRepos */ = {
 			isa = PBXGroup;
 			children = (
-				8BABB8C32B0D365C00E12042 /* GitHubTrendingReposApp.swift */,
-				8BABB8C52B0D365C00E12042 /* ContentView.swift */,
+				8BABB8ED2B0D45BE00E12042 /* Screens */,
+				8BABB8F42B0E1B7C00E12042 /* Utils */,
 				8BABB8C72B0D365D00E12042 /* Assets.xcassets */,
 				8BABB8C92B0D365D00E12042 /* Preview Content */,
 			);
@@ -125,6 +132,48 @@
 				8BABB8E02B0D365E00E12042 /* GitHubTrendingReposUITestsLaunchTests.swift */,
 			);
 			path = GitHubTrendingReposUITests;
+			sourceTree = "<group>";
+		};
+		8BABB8ED2B0D45BE00E12042 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8BABB8EE2B0D45C600E12042 /* Welcome */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8BABB8EE2B0D45C600E12042 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				8BABB8C52B0D365C00E12042 /* WelcomeView.swift */,
+				8BABB8F02B0D4B9000E12042 /* WelcomeViewModel.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		8BABB8EF2B0D45E600E12042 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8BABB8F42B0E1B7C00E12042 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8BABB8F52B0E1B9A00E12042 /* Views */,
+				8BABB8EF2B0D45E600E12042 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8BABB8F52B0E1B9A00E12042 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BABB8F82B0E278900E12042 /* CallToActionButton.swift */,
+				8BABB8F62B0E1BC800E12042 /* UnderlineButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BABB8C62B0D365C00E12042 /* ContentView.swift in Sources */,
+				8BABB8F92B0E278900E12042 /* CallToActionButton.swift in Sources */,
+				8BABB8C62B0D365C00E12042 /* WelcomeView.swift in Sources */,
+				8BABB8F12B0D4B9000E12042 /* WelcomeViewModel.swift in Sources */,
+				8BABB8F72B0E1BC800E12042 /* UnderlineButton.swift in Sources */,
 				8BABB8C42B0D365C00E12042 /* GitHubTrendingReposApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +482,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +513,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
