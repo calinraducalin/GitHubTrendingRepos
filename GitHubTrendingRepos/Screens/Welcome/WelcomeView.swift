@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @StateObject var viewModel = WelcomeViewModel()
+    @StateObject private var viewModel = WelcomeViewModel()
     
     var body: some View {
         ZStack {
@@ -95,7 +95,7 @@ private struct PrivacyTermsView: View {
             Text(" " + "and" + " ")
             UnderlineButton(text: "Terms of use", action: termsAction)
         }
-        .font(.caption)
+        .font(.footnote)
         .opacity(0.75)
     }
 }

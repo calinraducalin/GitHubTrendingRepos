@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct GitHubTrendingReposApp: App {
+    
+    init() {
+        UICollectionView.appearance().backgroundColor = .clear
+    }
+    
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            TrendingView()
         }
     }
 }
