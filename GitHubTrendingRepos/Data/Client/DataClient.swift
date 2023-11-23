@@ -9,7 +9,6 @@ import OSLog
 import Foundation
 
 protocol DataClient {
-    var host: String { get }
     var logger: Logger? { get }
     
     func getData(from: URL) async throws -> Data
@@ -18,10 +17,10 @@ protocol DataClient {
 extension DataClient {
     var logger: Logger? { AppLogger.data }
 
-    func makeURL(endpoint: String, queryItems: [URLQueryItem] = []) -> URL {
+    func makeURL(endpoint: String, host: DataClientHost = .glitter, queryItems: [URLQueryItem] = []) -> URL {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = host
+        components.host = host.rawValue
         components.path = endpoint
         components.queryItems = queryItems
         

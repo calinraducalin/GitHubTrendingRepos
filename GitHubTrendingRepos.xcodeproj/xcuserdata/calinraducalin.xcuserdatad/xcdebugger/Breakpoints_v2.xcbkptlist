@@ -20,5 +20,148 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A49A5F8-E6B0-4CFA-B225-60B2F39669EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubTrendingRepos/Screens/RepositoryDetails/RepositoryDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "loadReadmeFile()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8A49A5F8-E6B0-4CFA-B225-60B2F39669EC - 7136c522431d63cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for GitHubTrendingRepos.RepositoryDetailsViewModel.loadReadmeFile() async -&gt; ()"
+                  moduleName = "GitHubTrendingRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/calinraducalin/Development/Personal/GitHubTrendingRepos/GitHubTrendingRepos/Screens/RepositoryDetails/RepositoryDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "8A49A5F8-E6B0-4CFA-B225-60B2F39669EC - 7136c522431d6235"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for GitHubTrendingRepos.RepositoryDetailsViewModel.loadReadmeFile() async -&gt; ()"
+                  moduleName = "GitHubTrendingRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/calinraducalin/Development/Personal/GitHubTrendingRepos/GitHubTrendingRepos/Screens/RepositoryDetails/RepositoryDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "8A49A5F8-E6B0-4CFA-B225-60B2F39669EC - 7136c522431d6296"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for GitHubTrendingRepos.RepositoryDetailsViewModel.loadReadmeFile() async -&gt; ()"
+                  moduleName = "GitHubTrendingRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/calinraducalin/Development/Personal/GitHubTrendingRepos/GitHubTrendingRepos/Screens/RepositoryDetails/RepositoryDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "840">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A580037-89B0-4752-AEC3-A6A253132D66"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubTrendingRepos/Data/Client/TrendingRepos/TrendingReposDataClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "fetchTrendingRepos(periodfilter:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEEB68EC-ACDA-43A5-A79E-E8932E22882D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubTrendingRepos/Data/Client/DataClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "makeURL(endpoint:host:queryItems:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DEEB68EC-ACDA-43A5-A79E-E8932E22882D - af1d13b82f71ec6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHubTrendingRepos.DataClient.makeURL(endpoint: Swift.String, queryItems: Swift.Array&lt;Foundation.URLQueryItem&gt;) -&gt; Foundation.URL"
+                  moduleName = "GitHubTrendingRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/calinraducalin/Development/Personal/GitHubTrendingRepos/GitHubTrendingRepos/Data/Client/DataClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "684">
+               </Location>
+               <Location
+                  uuid = "DEEB68EC-ACDA-43A5-A79E-E8932E22882D - deb9e61946e19456"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHubTrendingRepos.DataClient.makeURL(endpoint: Swift.String, host: GitHubTrendingRepos.DataClientHost, queryItems: Swift.Array&lt;Foundation.URLQueryItem&gt;) -&gt; Foundation.URL"
+                  moduleName = "GitHubTrendingRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/calinraducalin/Development/Personal/GitHubTrendingRepos/GitHubTrendingRepos/Data/Client/DataClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "712">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30778480-A7D7-453F-8EF6-327677584A61"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubTrendingRepos/Screens/RepositoryDetails/RepositoryDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "loadReadmeFile()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

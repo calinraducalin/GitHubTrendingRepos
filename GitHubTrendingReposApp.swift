@@ -16,7 +16,8 @@ struct GitHubTrendingReposApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TrendingView()
+            RepositoryDetailsView(viewModel: .init())
+//            TrendingView()
         }
     }
 }

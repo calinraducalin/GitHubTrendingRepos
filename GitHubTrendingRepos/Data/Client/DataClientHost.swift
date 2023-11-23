@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum DataClientHost: String {
+    case github = "raw.githubusercontent.com"
+    case glitter = "api.gitterapp.com"
+}

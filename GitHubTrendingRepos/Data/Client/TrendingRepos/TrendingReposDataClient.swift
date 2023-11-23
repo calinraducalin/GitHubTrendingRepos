@@ -11,10 +11,6 @@ protocol TrendingReposDataClient: DataClient {
     func fetchTrendingRepos(periodfilter: TrendingPeriodFilter) async throws -> [Repository]
 }
 
-extension TrendingReposDataClient {
-    var host: String { "api.gitterapp.com" }
-}
-
 extension URLSession: TrendingReposDataClient {
     func fetchTrendingRepos(periodfilter: TrendingPeriodFilter) async throws -> [Repository] {
         let sinceQuery = URLQueryItem(name: "since", value: periodfilter.rawValue)

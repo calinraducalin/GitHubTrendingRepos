@@ -20,5 +20,6 @@ struct Repository: Codable {
 }
 
 extension Repository: Identifiable {
-    var id: String { "\(author)/\(name)" }
+    var id: String { path }
+    var path: String { "\(author)/\(name)" }
 }

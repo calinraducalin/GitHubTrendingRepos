@@ -15,9 +15,9 @@ struct WelcomeView: View {
             Color(.background)
                 .ignoresSafeArea()
             VStack {
-                TopView(action: viewModel.goToXapoAction)
+                HeaderView(action: viewModel.goToXapoAction)
                 ContentView()
-                BottomView(
+                FooterView(
                     primaryAction: viewModel.primaryAction,
                     privacyAction: viewModel.privacyAction,
                     termsAction: viewModel.termsAction
@@ -28,7 +28,7 @@ struct WelcomeView: View {
     }
 }
 
-private struct TopView: View {
+private struct HeaderView: View {
     let action: () -> Void
     
     var body: some View {
@@ -71,7 +71,7 @@ private struct ContentView: View {
     }
 }
 
-private struct BottomView: View {
+private struct FooterView: View {
     let primaryAction: () -> Void
     let privacyAction: () -> Void
     let termsAction: () -> Void

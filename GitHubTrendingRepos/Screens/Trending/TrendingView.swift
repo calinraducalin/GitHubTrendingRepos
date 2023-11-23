@@ -15,7 +15,7 @@ struct TrendingView: View {
         NavigationView {
             List(viewModel.repositories) { repository in
                 Button(action: {}) {
-                    RepositoryCardView(repository: repository)
+                    CardView(repository: repository, periodFilter: viewModel.periodFilter)
                 }
                 .listRowBackground(Color(.systemGray2))
                 .buttonStyle(ScaleButtonStyle())
@@ -70,15 +70,16 @@ private struct ScaleButtonStyle: ButtonStyle {
     }
 }
 
-private struct RepositoryCardView: View {
+private struct CardView: View {
     let repository: Repository
+    let periodFilter: TrendingPeriodFilter
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            CardTopView(repository: repository)
+            CardHeaderView(repository: repository)
             Text(repository.description ?? "")
                 .font(.body)
-            CardBottomView(repository: repository)
+            CardFooterView(repository: repository, periodFilter: periodFilter)
         }
         .padding(16)
         .background(Color.background)
@@ -87,7 +88,7 @@ private struct RepositoryCardView: View {
     }
 }
 
-private struct CardTopView: View {
+private struct CardHeaderView: View {
     let repository: Repository
     
     var body: some View {
@@ -112,19 +113,23 @@ private struct CardTopView: View {
     }
 }
 
-private struct CardBottomView: View {
+private struct CardFooterView: View {
+    private enum Constants {
+        static let horizontalSpacing: CGFloat = 4
+    }
     let repository: Repository
+    let periodFilter: TrendingPeriodFilter
     
     var body: some View {
         HStack(spacing: 16) {
-            HStack(spacing: 4) {
+            HStack(spacing: Constants.horizontalSpacing) {
                 Image(systemName: "star")
-                Text(repository.currentPeriodStars?.description ?? "")
+                Text(starsText)
             }
             .font(.headline)
             .foregroundColor(.secondary)
             
-            HStack(spacing: 4) {
+            HStack(spacing: Constants.horizontalSpacing) {
                 Image(systemName: "circle.fill")
                     .foregroundColor(Color(hex: repository.languageColor ?? ""))
                 Text(repository.language ?? "")
@@ -132,6 +137,11 @@ private struct CardBottomView: View {
             }
             .font(.headline)
         }
+    }
+    
+    private var starsText: String {
+        guard let stars = repository.currentPeriodStars else { return "" }
+        return "\(stars) \(periodFilter.title.lowercased())"
     }
 }
 

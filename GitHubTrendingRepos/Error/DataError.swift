@@ -10,6 +10,7 @@ import Foundation
 enum DataError: Error, Equatable {
     case network
     case trendingRepos
+    case readmeContent
 }
 
 extension DataError: LocalizedError {
@@ -19,6 +20,8 @@ extension DataError: LocalizedError {
             return "A network error occured."
         case .trendingRepos:
             return "An error occured while fetching the trending repositories."
+        case .readmeContent:
+            return "An error occured while fetching the readme file content."
         }
     }
 }
