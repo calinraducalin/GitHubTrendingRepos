@@ -5,7 +5,7 @@
 //  Created by Calin Radu Calin on 22.11.2023.
 //
 
-import UIKit
+import SwiftUI
 
 @MainActor
 final class TrendingViewModel: ObservableObject {
@@ -13,7 +13,9 @@ final class TrendingViewModel: ObservableObject {
     
     @Published var periodFilter: TrendingPeriodFilter = .daily {
         didSet {
-            repositories = []
+            withAnimation {
+                repositories = []                
+            }
             Task {
                 await fetchTrendingRepos()
             }
@@ -27,7 +29,10 @@ final class TrendingViewModel: ObservableObject {
     
     func fetchTrendingRepos() async {
         do {
-            repositories = try await dataClient.fetchTrendingRepos(periodfilter: periodFilter)
+            let repositories = try await dataClient.fetchTrendingRepos(periodfilter: periodFilter)
+            withAnimation {
+                self.repositories = repositories
+            }
         } catch {
             print("handle error")
         }

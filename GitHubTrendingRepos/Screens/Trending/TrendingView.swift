@@ -5,6 +5,7 @@
 //  Created by Calin Radu Calin on 22.11.2023.
 //
 
+import SDWebImageSwiftUI
 import SwiftUI
 
 struct TrendingView: View {
@@ -82,7 +83,7 @@ private struct RepositoryCardView: View {
         .padding(16)
         .background(Color.background)
         .cornerRadius(20)
-        .shadow(color: .black.opacity(0.4), radius: 10)
+        .shadow(color: .black.opacity(0.4), radius: 5)
     }
 }
 
@@ -91,15 +92,11 @@ private struct CardTopView: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: repository.avatar) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(10)
-                    .clipped()
-            } placeholder: {
-                Color.gray
-            }
+            WebImage(url: repository.avatar)
+            .resizable()
+            .scaledToFit()
+            .cornerRadius(10)
+            .clipped()
             .frame(width: 50, height: 50)
 
             VStack(alignment: .leading, spacing: 5) {
