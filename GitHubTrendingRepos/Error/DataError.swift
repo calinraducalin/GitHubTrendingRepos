@@ -11,6 +11,7 @@ enum DataError: Error, Equatable {
     case network
     case trendingRepos
     case readmeContent
+    case unknown
 }
 
 extension DataError: LocalizedError {
@@ -22,6 +23,8 @@ extension DataError: LocalizedError {
             return "An error occured while fetching the trending repositories."
         case .readmeContent:
             return "An error occured while fetching the readme file content."
+        case .unknown:
+            return "An unknown error occured."
         }
     }
 }

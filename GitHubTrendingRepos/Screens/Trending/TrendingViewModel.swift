@@ -23,22 +23,34 @@ final class TrendingViewModel: ObservableObject {
     }
     @Published var selectedRepository: Repository?
     @Published private(set) var repositories = [TrendingRepository]()
+    @Published private(set) var state: ViewState = .success
         
     init(dataClient: TrendingReposDataClient = URLSession.shared) {
         self.dataClient = dataClient
     }
     
     func fetchTrendingRepos() async {
+        state = .loading
         do {
             let repositories = try await dataClient.fetchTrendingRepos(periodfilter: periodFilter)
+            let trendingRepositories = repositories.map {
+                TrendingRepository(item: $0, period: periodFilter)
+            }
             withAnimation {
-                self.repositories = repositories.map {
-                    TrendingRepository(item: $0, period: periodFilter)
-                }
+                self.repositories = trendingRepositories
+                state = .success
             }
         } catch {
-            print("handle error")
+            let dataError = error as? DataError ?? .unknown
+            state = .failure(dataError)
         }
     }
     
+}
+
+
+enum ViewState: Equatable {
+    case success
+    case loading
+    case failure(_ error: DataError)
 }

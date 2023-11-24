@@ -40,7 +40,6 @@ extension URLSession: DataClient {
     func getData(from url: URL) async throws -> Data {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.cachePolicy = .returnCacheDataElseLoad
         return try await executeRequest(request)
     }
 }

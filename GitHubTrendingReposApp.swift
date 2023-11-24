@@ -11,7 +11,6 @@ import SwiftUI
 struct GitHubTrendingReposApp: App {
     
     init() {
-        URLCache.shared.removeAllCachedResponses()
         UICollectionView.appearance().backgroundColor = .clear
         UINavigationBar.appearance().prefersLargeTitles = true
     }

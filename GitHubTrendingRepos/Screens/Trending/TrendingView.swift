@@ -12,19 +12,27 @@ struct TrendingView: View {
         
     var body: some View {
         NavigationView {
-            List(viewModel.repositories) { repository in
-                Button(action: {
-                    viewModel.selectedRepository = repository.item
-                }, label: {
-                    RepositoryCardView(repository: repository.item, periodFilter: repository.period)
-                })
-                .listRowBackground(Color(.systemGray2))
-                .buttonStyle(ScaleButtonStyle())
+            ZStack {
+                Color(.systemGray2)
+                    .ignoresSafeArea()
+                if !viewModel.repositories.isEmpty {
+                    List(viewModel.repositories) { repository in
+                        Button(action: {
+                            viewModel.selectedRepository = repository.item
+                        }, label: {
+                            RepositoryCardView(repository: repository.item, periodFilter: repository.period)
+                        })
+                        .listRowBackground(Color(.systemGray2))
+                        .buttonStyle(ScaleButtonStyle())
+                    }
+                } else {
+                    let (title, subtitle) = makeEmptyViewTexts(state: viewModel.state)
+                    EmptyView(title: title, subtitle: subtitle)
+                }
             }
             .toolbar {
                 PeriodFilterToolbar(selectedFilter: $viewModel.periodFilter)
             }
-            .background(Color(.systemGray2))
             .listStyle(.plain)
             .navigationBarTitle("Trending Repos")
             .task {
@@ -37,6 +45,25 @@ struct TrendingView: View {
                 RepositoryDetailsView(viewModel: RepositoryDetailsViewModel(repository: repository))
             }
         }
+    }
+}
+
+private extension TrendingView {
+    func makeEmptyViewTexts(state: ViewState) -> (title: String, subtitle: String) {
+        let title: String
+        let subtitle: String
+        switch state {
+        case .success:
+            title = "No repository found. 😢"
+            subtitle = "There is no trending repository to show at this time."
+        case .loading:
+            title = "Loading repositories... 👀"
+            subtitle = "Your repositories will appear shortly."
+        case .failure:
+            title = "Oups... 🙈"
+            subtitle = "Something went wrong while loading your repositories."
+        }
+        return (title, subtitle)
     }
 }
 
