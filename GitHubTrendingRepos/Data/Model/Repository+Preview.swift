@@ -19,4 +19,16 @@ extension Repository {
         stars: 26065,
         forks: 1434
     )
+    static let previewSager = Repository(
+        author: "SagerNet",
+        name: "sing-box",
+        avatar: URL(string: "https://github.com/SagerNet.png"),
+        description: "The universal proxy platform",
+        language: "Go",
+        languageColor: "#00ADD8",
+        currentPeriodStars: 3413,
+        stars: 8811,
+        forks: 1216
+    )
+    
 }

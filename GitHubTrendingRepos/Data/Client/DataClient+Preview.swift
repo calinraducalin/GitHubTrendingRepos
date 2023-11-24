@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol PreviewDataClient: DataClient { }
+protocol TestDataClient: DataClient { }
 
-extension PreviewDataClient {
+extension TestDataClient {
     func getData(from: URL) async throws -> Data { .init() }
 }

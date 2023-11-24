@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RepoDetailsDataClientPreview: RepoDetailsDataClient, PreviewDataClient {
+final class RepoDetailsDataClientPreview: RepoDetailsDataClient, TestDataClient {
     func fetchReadmeContent(repositoryPath: String) async throws -> String {
         return readmeContentPreview
     }

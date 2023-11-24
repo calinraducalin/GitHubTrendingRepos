@@ -47,10 +47,3 @@ final class TrendingViewModel: ObservableObject {
     }
     
 }
-
-
-enum ViewState: Equatable {
-    case success
-    case loading
-    case failure(_ error: DataError)
-}

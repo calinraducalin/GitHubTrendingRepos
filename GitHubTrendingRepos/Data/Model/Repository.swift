@@ -19,7 +19,7 @@ struct Repository: Codable {
     let forks: Int?
 }
 
-extension Repository: Identifiable {
+extension Repository: Identifiable, Equatable {
     var id: String { path }
     var path: String { "\(author)/\(name)" }
 }

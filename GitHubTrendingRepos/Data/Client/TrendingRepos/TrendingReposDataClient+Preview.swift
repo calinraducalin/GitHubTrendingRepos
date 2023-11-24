@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class TrendingReposDataClientPreview: TrendingReposDataClient, PreviewDataClient {
-    func fetchTrendingRepos(periodfilter: TrendingPeriodFilter) async throws -> [Repository] { [.previewTldraw, .previewTldraw] }
+final class TrendingReposDataClientPreview: TrendingReposDataClient, TestDataClient {
+    func fetchTrendingRepos(periodfilter: TrendingPeriodFilter) async throws -> [Repository] { [.previewTldraw, .previewSager] }
 }
