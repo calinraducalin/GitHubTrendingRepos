@@ -9,12 +9,13 @@ import SwiftUI
 
 @MainActor
 final class RepositoryDetailsViewModel: ObservableObject {
+    let repository: Repository
     @Published private(set) var readmeContent = ""
-    private(set) var repository: Repository = .previewMicrosoft
     private let dataClient: RepoDetailsDataClient
     
-    init(dataClient: RepoDetailsDataClient = URLSession.shared) {
+    init(dataClient: RepoDetailsDataClient = URLSession.shared, repository: Repository) {
         self.dataClient = dataClient
+        self.repository = repository
     }
     
     func loadReadmeFile() async {
@@ -24,7 +25,7 @@ final class RepositoryDetailsViewModel: ObservableObject {
                 self.readmeContent = readmeContent
             }
         } catch {
-            print("handle error")
+            AppLogger.data.error("failed to load readme file for: \(self.repository.path)")
         }
 
     }

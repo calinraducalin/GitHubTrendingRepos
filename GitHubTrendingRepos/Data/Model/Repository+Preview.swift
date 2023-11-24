@@ -8,17 +8,6 @@
 import Foundation
 
 extension Repository {
-    static let previewMicrosoft = Repository(
-        author: "microsoft",
-        name: "ML-For-Beginners",
-        avatar: URL(string: "https://github.com/microsoft.png"),
-        description: "12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all",
-        language: "HTML",
-        languageColor: "#e34c26",
-        currentPeriodStars: 6246,
-        stars: 60244,
-        forks: 12106
-    )
     static let previewTldraw = Repository(
         author: "tldraw",
         name: "tldraw",

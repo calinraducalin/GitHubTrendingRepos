@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct TrendingRepository: Identifiable {
+    let item: Repository
+    let period: TrendingPeriodFilter
+    
+    var id: String { item.id }
+}

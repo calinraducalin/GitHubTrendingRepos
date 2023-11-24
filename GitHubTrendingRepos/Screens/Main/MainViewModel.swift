@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+final class MainViewModel: ObservableObject {
+    @Published var showTrending = false
+    let trendingViewModel: TrendingViewModel
+    
+    init(trendingViewModel: TrendingViewModel) {
+        self.trendingViewModel = trendingViewModel
+    }
+}

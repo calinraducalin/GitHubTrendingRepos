@@ -21,7 +21,8 @@ final class TrendingViewModel: ObservableObject {
             }
         }
     }
-    @Published private(set) var repositories = [Repository]()
+    @Published var selectedRepository: Repository?
+    @Published private(set) var repositories = [TrendingRepository]()
         
     init(dataClient: TrendingReposDataClient = URLSession.shared) {
         self.dataClient = dataClient
@@ -31,7 +32,9 @@ final class TrendingViewModel: ObservableObject {
         do {
             let repositories = try await dataClient.fetchTrendingRepos(periodfilter: periodFilter)
             withAnimation {
-                self.repositories = repositories
+                self.repositories = repositories.map {
+                    TrendingRepository(item: $0, period: periodFilter)
+                }
             }
         } catch {
             print("handle error")

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @StateObject private var viewModel = WelcomeViewModel()
+    @StateObject var viewModel: WelcomeViewModel
     
     var body: some View {
         ZStack {
@@ -101,5 +101,5 @@ private struct PrivacyTermsView: View {
 }
 
 #Preview {
-    WelcomeView()
+    WelcomeView(viewModel: .init(showTrending: .constant(false)))
 }

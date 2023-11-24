@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var viewModel = MainViewModel(trendingViewModel: TrendingViewModel())
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.background
+                .ignoresSafeArea()
+            if viewModel.showTrending {
+                TrendingView(viewModel: viewModel.trendingViewModel)
+            } else {
+                WelcomeView(viewModel: .init(showTrending: $viewModel.showTrending))
+            }
+            
+        }
     }
 }
 
 #Preview {
-    MainView()
+    MainView(
+        viewModel: MainViewModel(
+            trendingViewModel: TrendingViewModel(
+                dataClient: TrendingReposDataClientPreview()
+            )
+        )
+    )
 }

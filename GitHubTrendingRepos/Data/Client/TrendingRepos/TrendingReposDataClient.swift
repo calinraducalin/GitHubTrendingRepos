@@ -26,11 +26,3 @@ extension URLSession: TrendingReposDataClient {
         }
     }
 }
-
-enum TrendingPeriodFilter: String, CaseIterable {
-    case daily, weekly, monthly
-}
-
-extension TrendingPeriodFilter: Identifiable {
-    var id: String { rawValue }
-}

@@ -10,6 +10,7 @@ import SDWebImageSwiftUI
 import SwiftUI
 
 struct RepositoryDetailsView: View {
+    @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: RepositoryDetailsViewModel
     
     var body: some View {
@@ -17,44 +18,52 @@ struct RepositoryDetailsView: View {
             ZStack {
                 Color.background.ignoresSafeArea()
                 List {
-                    HeaderView(repository: viewModel.repository)
-                        .listRowBackground(Color(.background))
-                    Text(viewModel.repository.description ?? "")
-                        .font(.body)
-                        .listRowBackground(Color(.background))
-
-                    Section("README.md") {
-                        Markdown(viewModel.readmeContent)
-                            .listRowBackground(Color(.background))                        
-                    }
+                    listContent.listRowBackground(Color(.background))
                 }
                 .background(Color(.background))
                 .listStyle(.grouped)
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .task {
-                await viewModel.loadReadmeFile()
-            }
+            .navigationTitle(viewModel.repository.name)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text(viewModel.repository.author)
                         .font(.headline)
                         .foregroundStyle(.secondary)
                 }
-                ToolbarItem(placement: .principal) {
-                    Text(viewModel.repository.name)
-                        .font(.headline)
-                }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {}) {
+                    Button(action: {
+                        dismiss()
+                    }, label: {
                         Image(systemName: "xmark.circle")
                             .font(.title2)
-                    }
+                    })
+                }
+            }
+            .task {
+                await viewModel.loadReadmeFile()
+            }
+        }
+        .navigationViewStyle(.stack)
+    }
+    
+}
+
+private extension RepositoryDetailsView {
+    
+    var listContent: some View {
+        Group {
+            HeaderView(repository: viewModel.repository)
+            if let description = viewModel.repository.description, !description.isEmpty {
+                Text(description)
+                    .font(.body)
+            }
+            if !viewModel.readmeContent.isEmpty {
+                Section("README.md") {
+                    Markdown(viewModel.readmeContent)
                 }
             }
         }
     }
-
 }
 
 private struct HeaderView: View {
@@ -102,5 +111,5 @@ private struct HeaderView: View {
 }
 
 #Preview {
-    RepositoryDetailsView(viewModel: RepositoryDetailsViewModel(dataClient: RepoDetailsDataClientPreview()))
+    RepositoryDetailsView(viewModel: RepositoryDetailsViewModel(dataClient: RepoDetailsDataClientPreview(), repository: .previewTldraw))
 }

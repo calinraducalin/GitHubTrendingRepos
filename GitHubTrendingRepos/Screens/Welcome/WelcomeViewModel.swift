@@ -5,16 +5,23 @@
 //  Created by Calin Radu Calin on 21.11.2023.
 //
 
-import UIKit
+import SwiftUI
 
 final class WelcomeViewModel: ObservableObject {
+    @Binding var showTrending: Bool
+    
+    init(showTrending: Binding<Bool>) {
+        _showTrending = showTrending
+    }
     
     func goToXapoAction() {
         openURL(with: "https://www.xapobank.com")
     }
     
     func primaryAction() {
-        
+        withAnimation {
+            showTrending = true            
+        }
     }
     
     func privacyAction() {

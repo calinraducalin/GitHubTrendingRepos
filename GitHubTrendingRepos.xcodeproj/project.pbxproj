@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8B0558682B0FC9FE0043F705 /* DataClientHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0558672B0FC9FE0043F705 /* DataClientHost.swift */; };
 		8B05586A2B0FCACE0043F705 /* RepoDetailsDataClient+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0558692B0FCACE0043F705 /* RepoDetailsDataClient+Preview.swift */; };
+		8B0558722B0FF0A80043F705 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0558712B0FF0A80043F705 /* MainView.swift */; };
+		8B0558742B0FF18E0043F705 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0558732B0FF18E0043F705 /* MainViewModel.swift */; };
+		8B0558762B0FF9620043F705 /* TrendingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0558752B0FF9620043F705 /* TrendingRepository.swift */; };
+		8B0558782B0FFA000043F705 /* ScaleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0558772B0FFA000043F705 /* ScaleButtonStyle.swift */; };
+		8B05587A2B1011850043F705 /* RepositoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0558792B1011850043F705 /* RepositoryCardView.swift */; };
+		8B05587C2B10122E0043F705 /* TrendingPeriodFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05587B2B10122E0043F705 /* TrendingPeriodFilter.swift */; };
 		8B805C6B2B0FBB470052415F /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8B805C6A2B0FBB470052415F /* MarkdownUI */; };
 		8B805C6E2B0FC4560052415F /* RepoDetailsDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805C6D2B0FC4560052415F /* RepoDetailsDataClient.swift */; };
 		8BABB8C42B0D365C00E12042 /* GitHubTrendingReposApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BABB8C32B0D365C00E12042 /* GitHubTrendingReposApp.swift */; };
@@ -58,6 +64,12 @@
 /* Begin PBXFileReference section */
 		8B0558672B0FC9FE0043F705 /* DataClientHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClientHost.swift; sourceTree = "<group>"; };
 		8B0558692B0FCACE0043F705 /* RepoDetailsDataClient+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoDetailsDataClient+Preview.swift"; sourceTree = "<group>"; };
+		8B0558712B0FF0A80043F705 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8B0558732B0FF18E0043F705 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8B0558752B0FF9620043F705 /* TrendingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepository.swift; sourceTree = "<group>"; };
+		8B0558772B0FFA000043F705 /* ScaleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleButtonStyle.swift; sourceTree = "<group>"; };
+		8B0558792B1011850043F705 /* RepositoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCardView.swift; sourceTree = "<group>"; };
+		8B05587B2B10122E0043F705 /* TrendingPeriodFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingPeriodFilter.swift; sourceTree = "<group>"; };
 		8B805C6D2B0FC4560052415F /* RepoDetailsDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsDataClient.swift; sourceTree = "<group>"; };
 		8BABB8C02B0D365C00E12042 /* GitHubTrendingRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubTrendingRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BABB8C32B0D365C00E12042 /* GitHubTrendingReposApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrendingReposApp.swift; sourceTree = "<group>"; };
@@ -115,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B0558702B0FF0900043F705 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8B0558712B0FF0A80043F705 /* MainView.swift */,
+				8B0558732B0FF18E0043F705 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		8B805C6C2B0FC4100052415F /* RepoDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +207,7 @@
 		8BABB8ED2B0D45BE00E12042 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8B0558702B0FF0900043F705 /* Main */,
 				8BABB8EE2B0D45C600E12042 /* Welcome */,
 				8BABB8FA2B0E320E00E12042 /* Trending */,
 				8BABB9212B0FA33000E12042 /* RepositoryDetails */,
@@ -226,6 +248,7 @@
 			children = (
 				8BABB8F82B0E278900E12042 /* CallToActionButton.swift */,
 				8BABB8F62B0E1BC800E12042 /* UnderlineButton.swift */,
+				8B0558772B0FFA000043F705 /* ScaleButtonStyle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +258,7 @@
 			children = (
 				8BABB8FB2B0E323E00E12042 /* TrendingView.swift */,
 				8BABB8FD2B0E7C8E00E12042 /* TrendingViewModel.swift */,
+				8B0558792B1011850043F705 /* RepositoryCardView.swift */,
 			);
 			path = Trending;
 			sourceTree = "<group>";
@@ -273,6 +297,7 @@
 			children = (
 				8BABB90B2B0EB97B00E12042 /* Repository.swift */,
 				8BABB9262B0FA87100E12042 /* Repository+Preview.swift */,
+				8B0558752B0FF9620043F705 /* TrendingRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +315,7 @@
 			children = (
 				8BABB9082B0EB37800E12042 /* TrendingReposDataClient.swift */,
 				8BABB9122B0EBD7F00E12042 /* TrendingReposDataClient+Preview.swift */,
+				8B05587B2B10122E0043F705 /* TrendingPeriodFilter.swift */,
 			);
 			path = TrendingRepos;
 			sourceTree = "<group>";
@@ -443,6 +469,7 @@
 			files = (
 				8BABB8F92B0E278900E12042 /* CallToActionButton.swift in Sources */,
 				8BABB91A2B0ED1C000E12042 /* Color+.swift in Sources */,
+				8B05587A2B1011850043F705 /* RepositoryCardView.swift in Sources */,
 				8BABB9182B0ECD3000E12042 /* UICollectionReusableView+.swift in Sources */,
 				8BABB9132B0EBD7F00E12042 /* TrendingReposDataClient+Preview.swift in Sources */,
 				8BABB8C62B0D365C00E12042 /* WelcomeView.swift in Sources */,
@@ -454,15 +481,20 @@
 				8BABB90C2B0EB97B00E12042 /* Repository.swift in Sources */,
 				8B805C6E2B0FC4560052415F /* RepoDetailsDataClient.swift in Sources */,
 				8BABB9272B0FA87100E12042 /* Repository+Preview.swift in Sources */,
+				8B0558762B0FF9620043F705 /* TrendingRepository.swift in Sources */,
 				8BABB9022B0EB12E00E12042 /* DataClient.swift in Sources */,
 				8BABB9252B0FA37200E12042 /* RepositoryDetailsViewModel.swift in Sources */,
 				8BABB8FC2B0E323E00E12042 /* TrendingView.swift in Sources */,
 				8B05586A2B0FCACE0043F705 /* RepoDetailsDataClient+Preview.swift in Sources */,
 				8B0558682B0FC9FE0043F705 /* DataClientHost.swift in Sources */,
 				8BABB9062B0EB1DA00E12042 /* DataError.swift in Sources */,
+				8B0558782B0FFA000043F705 /* ScaleButtonStyle.swift in Sources */,
+				8B0558722B0FF0A80043F705 /* MainView.swift in Sources */,
 				8BABB8F72B0E1BC800E12042 /* UnderlineButton.swift in Sources */,
 				8BABB8C42B0D365C00E12042 /* GitHubTrendingReposApp.swift in Sources */,
+				8B05587C2B10122E0043F705 /* TrendingPeriodFilter.swift in Sources */,
 				8BABB9162B0EC3FB00E12042 /* DataClient+Preview.swift in Sources */,
+				8B0558742B0FF18E0043F705 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
