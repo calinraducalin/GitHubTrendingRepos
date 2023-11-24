@@ -16,15 +16,7 @@ struct TrendingView: View {
                 Color(.systemGray2)
                     .ignoresSafeArea()
                 if !viewModel.repositories.isEmpty {
-                    List(viewModel.repositories) { repository in
-                        Button(action: {
-                            viewModel.selectedRepository = repository.item
-                        }, label: {
-                            RepositoryCardView(repository: repository.item, periodFilter: repository.period)
-                        })
-                        .listRowBackground(Color(.systemGray2))
-                        .buttonStyle(ScaleButtonStyle())
-                    }
+                    trendingList
                 } else {
                     let (title, subtitle) = makeEmptyViewTexts(state: viewModel.state)
                     EmptyView(title: title, subtitle: subtitle)
@@ -49,6 +41,18 @@ struct TrendingView: View {
 }
 
 private extension TrendingView {
+    var trendingList: some View {
+        List(viewModel.repositories) { repository in
+            Button(action: {
+                viewModel.selectedRepository = repository.item
+            }, label: {
+                RepositoryCardView(repository: repository.item, periodFilter: repository.period)
+            })
+            .listRowBackground(Color(.systemGray2))
+            .buttonStyle(ScaleButtonStyle())
+        }
+    }
+    
     func makeEmptyViewTexts(state: ViewState) -> (title: String, subtitle: String) {
         let title: String
         let subtitle: String

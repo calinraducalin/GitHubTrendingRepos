@@ -17,11 +17,7 @@ struct RepositoryDetailsView: View {
         NavigationView {
             ZStack {
                 Color.background.ignoresSafeArea()
-                List {
-                    listContent.listRowBackground(Color(.background))
-                }
-                .background(Color(.background))
-                .listStyle(.grouped)
+                content
             }
             .navigationTitle(viewModel.repository.name)
             .toolbar {
@@ -50,19 +46,23 @@ struct RepositoryDetailsView: View {
 
 private extension RepositoryDetailsView {
     
-    var listContent: some View {
-        Group {
-            HeaderView(repository: viewModel.repository)
-            if let description = viewModel.repository.description, !description.isEmpty {
-                Text(description)
-                    .font(.body)
-            }
-            if !viewModel.readmeContent.isEmpty {
-                Section("README.md") {
-                    Markdown(viewModel.readmeContent)
+    var content: some View {
+        List {
+            Group {
+                HeaderView(repository: viewModel.repository)
+                if let description = viewModel.repository.description, !description.isEmpty {
+                    Text(description)
+                        .font(.body)
+                }
+                if !viewModel.readmeContent.isEmpty {
+                    Section("README.md") {
+                        Markdown(viewModel.readmeContent)
+                    }
                 }
             }
+            .listRowBackground(Color(.background))
         }
+        .listStyle(.grouped)
     }
 }
 
