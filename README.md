@@ -10,8 +10,6 @@ I tried to write simple and modern code taking in consideration the following as
 - code reuse was done with the help of ***protocol extensions***
 - support previews for every view for faster UI implementation
 
-I implemented the project on a different repository and then imported it here. If you want to check the commit history you can see them here: https://github.com/calinraducalin/GitHubTrendingRepos/activity?ref=main
-
 I have another demo app implemented in SwiftUI that caches the data using **CoreData**. I would love if you could check this project too because it is a bit more complex: https://github.com/calinraducalin/ComgyCodeChallenge
 
 
