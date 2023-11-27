@@ -25,7 +25,6 @@ struct TrendingView: View {
             .toolbar {
                 PeriodFilterToolbar(selectedFilter: $viewModel.periodFilter)
             }
-            .listStyle(.plain)
             .navigationBarTitle("Trending Repos")
             .task {
                 await viewModel.fetchTrendingRepos()
@@ -37,6 +36,8 @@ struct TrendingView: View {
                 RepositoryDetailsView(viewModel: RepositoryDetailsViewModel(repository: repository))
             }
         }
+        .navigationViewStyle(.stack)
+
     }
 }
 
@@ -51,6 +52,7 @@ private extension TrendingView {
             .listRowBackground(Color(.systemGray2))
             .buttonStyle(ScaleButtonStyle())
         }
+        .listStyle(.plain)
     }
     
     func makeEmptyViewTexts(state: ViewState) -> (title: String, subtitle: String) {
